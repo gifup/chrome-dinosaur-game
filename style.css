@@ -415,3 +415,112 @@ font-size:40px;
 }
 
 }
+/* ===== GAME SCENE ===== */
+
+.game-scene{
+    position:relative;
+    width:450px;
+    height:380px;
+    margin:auto;
+}
+
+.ground{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:40px;
+    height:4px;
+    background:#333;
+}
+
+.dino{
+    position:absolute;
+    left:70px;
+    bottom:44px;
+    width:110px;
+    animation:bounce 2s infinite ease-in-out;
+}
+
+.cactus{
+    position:absolute;
+    bottom:44px;
+    width:48px;
+}
+
+.cactus1{
+    left:260px;
+}
+
+.cactus2{
+    left:360px;
+}
+
+.cloud{
+    position:absolute;
+    width:90px;
+    height:30px;
+    background:#f3f3f3;
+    border-radius:30px;
+}
+
+.cloud::before,
+.cloud::after{
+    content:"";
+    position:absolute;
+    background:#f3f3f3;
+    border-radius:50%;
+}
+
+.cloud::before{
+    width:34px;
+    height:34px;
+    left:10px;
+    top:-12px;
+}
+
+.cloud::after{
+    width:44px;
+    height:44px;
+    right:10px;
+    top:-18px;
+}
+
+.cloud1{
+    top:40px;
+    left:40px;
+    animation:cloudMove 18s linear infinite;
+}
+
+.cloud2{
+    top:110px;
+    left:220px;
+    animation:cloudMove 24s linear infinite;
+}
+
+@keyframes cloudMove{
+
+0%{
+transform:translateX(0);
+}
+
+50%{
+transform:translateX(30px);
+}
+
+100%{
+transform:translateX(0);
+}
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+}
